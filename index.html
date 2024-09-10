@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulário de matrícula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#292524",
+              secondary: "#57534E",
+              tertiary: "#8F8881",
+              highlight: "#E43A12",
+              "brand-light": "#F67841",
+              "brand-mid": "#F3541C",
+              "brand-dark": "#E43A12",
+              "surface-primary": "#fff",
+              "surface-secondary": "#FEE7D6",
+              "surface-disabled": "#E7E5E4",
+              "surface-teriary": "#A8A29E",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased">
+    <div class="min-h-screen max-w-[1600px]">
+      <div class="grid lg:grid-cols-2 h-screen">
+        <div class="p-16 space-y-6 relative">
+          <button class="flex items-center gap-2 size-8">
+            <img src="./assets/arrow-left-02.svg" alt="" />
+            <span class="text-secondary">Voltar</span>
+          </button>
+          <form class="space-y-12">
+            <header class="space-y-4">
+              <h2 class="text-2xl font-bold tracking-tight">
+                Formulário de matrícula
+              </h2>
+              <p class="text-sm text-secondary">
+                Preencha os dados abaixo para matricular seu filho na escola de
+                educação infantil Estrelas do Amanhã.
+              </p>
+            </header>
+            <section class="space-y-6">
+              <h3 class="font-medium text-xl mb-6">Informações da criança</h3>
+
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary"
+                  >Nome completo</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary"
+                  >Data de nascimento</label
+                >
+                <input
+                  type="datetime-local"
+                  name=""
+                  id=""
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary">Sexo</label>
+                <select
+                  name=""
+                  id=""
+                  class="h-10 w-full bg-transparent outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                >
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary"
+                  >Informações médicas
+                </label>
+                <textarea
+                  name=""
+                  id=""
+                  class="h-10 w-full outline-none min-h-48 border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col gap-2">
+                <label for="doc-files" class="text-sm text-secondary"
+                  >Informações médicas
+                </label>
+                <label
+                  for="doc-files"
+                  class="border-dashed border-2 flex items-center justify-center rounded-lg min-h-48 border-surface-teriary"
+                >
+                  <div
+                    class="h-full text-base text-surface-teriary flex items-center flex-col my-auto"
+                  >
+                    <span class="">Clique aqui para</span>
+                    <span class="">selecionar arquivos</span>
+                    <img src="./assets/cloud-upload.svg" />
+                  </div>
+                  <input
+                    type="file"
+                    name=""
+                    id="doc-files"
+                    class="w-full h-full sr-only"
+                  />
+                </label>
+              </div>
+            </section>
+            <section class="space-y-6">
+              <h3 class="font-medium text-xl mb-6">Endereço residencial</h3>
+
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary">CEP</label>
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  value="01234-567"
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+              </div>
+              <div class="grid grid-cols-3 gap-5">
+                <div class="col-span-2">
+                  <div class="flex flex-col gap-2">
+                    <label for="" class="text-sm text-secondary">Rua</label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      value="Rua das Flores"
+                      class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="" class="text-sm text-secondary">Número</label>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    value="123"
+                    class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-3 gap-5">
+                <div class="col-span-2">
+                  <div class="flex flex-col gap-2">
+                    <label for="" class="text-sm text-secondary">Cidade</label>
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      value="São Paulo"
+                      class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                    />
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="" class="text-sm text-secondary">Estado</label>
+                  <input
+                    type="number"
+                    name=""
+                    id=""
+                    value="123"
+                    class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                  />
+                </div>
+              </div>
+            </section>
+            <section class="space-y-6">
+              <h3 class="font-medium text-xl mb-6">
+                Informações do responsável
+              </h3>
+
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary"
+                  >Nome do responsável</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  value="Miguel Roberto Alves"
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+                <span class="text-xs text-secondary"
+                  >Principal responsável legal e contato de emergência</span
+                >
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary">Telefone</label>
+                <input
+                  type="tel"
+                  name=""
+                  id=""
+                  value="(10) 9 8765-4321"
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  id=""
+                  class="h-10 w-full outline-none border border-surface-teriary p-2 text-tertiary rounded-lg focus:border-none focus:ring-2 focus:ring-brand-dark"
+                />
+              </div>
+            </section>
+            <section class="space-y-6">
+              <h3 class="font-medium text-xl mb-6">Opções de matrícula</h3>
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-sm text-secondary"
+                  >Selecione o turno de estudo</label
+                >
+                <div class="grid grid-cols-2 gap-8">
+                  <label
+                    for="morning"
+                    class="border-2 border-surface-teriary rounded-lg min-h-32 p-2 transition-all peer-checked:border-surface-tertiary"
+                  >
+                    <input
+                      type="checkbox"
+                      name="time"
+                      id="morning"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none relative"
+                    />
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/sun-cloud.png" />
+                      <p class="text-sm font-medium tracking-wide">Manhã</p>
+                    </div>
+                  </label>
+                  <label
+                    for="afternoon"
+                    class="border-2 border-surface-teriary rounded-lg min-h-32 p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="time"
+                      id="afternoon"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/sun.png" />
+                      <p class="text-sm font-medium tracking-wide">Tarde</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="flex flex-col gap-8">
+                <label for="" class="text-sm text-secondary"
+                  >Em qual esporte você gostaria de inscrever seu filho?</label
+                >
+                <div class="grid grid-cols-4 gap-8">
+                  <label
+                    for="football"
+                    class="border-2 border-surface-teriary rounded-lg p-2 transition-all peer-checked:border-surface-tertiary"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="football"
+                      class="peer accent-bg-brand-mid outline-none"
+                    />
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/football.svg" />
+                      <p class="text-sm font-medium tracking-wide">Futebol</p>
+                    </div>
+                  </label>
+                  <label
+                    for="basketball"
+                    class="border-2 border-surface-teriary rounded-lg p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="basketball"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-mid relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/basketball.svg" />
+                      <p class="text-sm font-medium tracking-wide">Basquete</p>
+                    </div>
+                  </label>
+                  <label
+                    for="swimming"
+                    class="border-2 border-surface-teriary rounded-lg p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="swimming"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-mid relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/swimming.svg" />
+                      <p class="text-sm font-medium tracking-wide">Natação</p>
+                    </div>
+                  </label>
+                  <label
+                    for="yoga"
+                    class="border-2 border-surface-teriary rounded-lg p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="yoga"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-mid relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/yoga.svg" />
+                      <p class="text-sm font-medium tracking-wide">Yoga</p>
+                    </div>
+                  </label>
+                  <label
+                    for="volleyball"
+                    class="border-2 border-surface-teriary rounded-lg p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="volleyball"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-mid relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/volleyball.svg" />
+                      <p class="text-sm font-medium tracking-wide">Volley</p>
+                    </div>
+                  </label>
+                  <label
+                    for="boxing-glove"
+                    class="border-2 border-surface-teriary rounded-lg p-2"
+                  >
+                    <input
+                      type="checkbox"
+                      name="sports"
+                      id="boxing-glove"
+                      class="appearance-none peer size-4 border border-surface-teriary rounded-full checked:bg-brand-mid checked:border-transparent focus:outline-none focus:ring-2 focus:ring-brand-mid relative"
+                    />
+                    <svg
+                      class="absolute hidden h-4 w-4 text-white peer-checked:block"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      ></path>
+                    </svg>
+                    <div
+                      class="flex justify-center items-center flex-col gap-4 select-none cursor-pointer"
+                    >
+                      <img src="./assets/option-section/boxing-glove.svg" />
+                      <p class="text-sm font-medium tracking-wide">Boxing</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </section>
+            <div class="flex items-center gap-3">
+              <input type="checkbox" name="" id="" />
+              <p class="text-secondary text-sm">
+                Declaro que li e concordo com os <span class="text-highlight font-medium">Termos e Condições</span> e com a
+               <span class="text-highlight font-medium">Política de Privacidade</span>  da escola Estrela do Amanhã.
+              </p>
+            </div>
+
+            <div class="flex justify-end items-center gap-8">
+                  <button class="w-[174px] py-3 px-6 font-medium rounded-lg border-2 text-highlight border-highlight">Salvar</button>
+                  <button class="w-[174px] py-3 px-6 text-white font-medium rounded-lg bg-highlight">Fazer matrícula</button>
+            </div>
+          </form>
+        </div>
+        <div class="hidden lg:block relative">
+          <div class="fixed top-0 right-0 bg-surface-secondary min-h-full">
+            <div class="space-y-4 p-16">
+              <header class="">
+                <div class="flex gap-2 items-center h-full">
+                  <img src="./assets/star.svg" alt="star" class="size-6" />
+                  <span class="text-base">Estrelas do Amanhã</span>
+                </div>
+                <h1 class="text-3xl font-bold tracking-tight">
+                  Porque cada momento <br />de
+                  <span class="text-highlight">aprendizado </span>conta
+                </h1>
+              </header>
+              <p class="text-sm text-secondary">
+                Inscreva seu filho em nossa escola e veja-o florescer em um
+                ambiente acolhedor, seguro e estimulante.
+              </p>
+              <div class="flex items-center justify-center h-full">
+                <img src="./assets/pana.png" alt="pana" class="my-auto" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
